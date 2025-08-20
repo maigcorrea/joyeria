@@ -87,7 +87,7 @@ const ParallaxSection = () => {
       {/* Sección oculta que se revela */}
       <div 
         ref={hiddenSectionRef}
-        className="hiddenParallaxSection h-screen fixed top-0 left-0 w-full z-0 flex flex-col items-start justify-center bg-gray-400">
+        className="hiddenParallaxSection h-screen fixed top-0 left-0 w-full z-0 flex flex-col items-start justify-center bg-gray-400 px-6">
         {/* <div className="flex flex-wrap justify-between md:w-full"> */}
             <div 
             className={`text-black transition-all duration-600 ease-out ml-6 ${
@@ -105,7 +105,10 @@ const ParallaxSection = () => {
                 </div>
             </div>           
         {/* </div> */}
-        <div className='flex justify-between '>
+
+        <div className="w-full h-[1px] bg-black my-[65px]"></div>
+        
+        <div className='flex w-[40%] justify-between mx-6'>
                 <div className='flex flex-col'>
                     <h3 className="text-xl font-bold">Atención al cliente</h3>
                     <a href="">Link1</a>
