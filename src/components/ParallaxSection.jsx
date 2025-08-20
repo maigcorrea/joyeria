@@ -98,8 +98,8 @@ const ParallaxSection = () => {
                     Únete a nuestra newsletter
                 </h2>
                 <div className="flex items-center justify-start">
-                    <input type="text" placeholder="Tu correo" className='absolute w-64 lg:w-full md:w-full p-4 rounded-r-4xl bg-white bg-opacity-20 outline-none' />
-                    <div className="flex justify-end w-64 lg:w-full md:w-full ">
+                    <input type="text" placeholder="Tu correo" className='absolute w-full lg:w-full md:w-full p-4 rounded-r-4xl bg-white bg-opacity-20 outline-none' />
+                    <div className="flex justify-end w-full lg:w-full md:w-full ">
                         <button className="relative inline-block bg-black text-white box-border px-6 py-4 rounded-4xl cursor-pointer" onClick={handleClick}>Suscribirse</button>
                     </div>
                 </div>
@@ -108,24 +108,24 @@ const ParallaxSection = () => {
 
         <div className="w-full h-[1px] bg-black my-[65px]"></div>
 
-        <div className='flex w-full justify-between items-end px-6'>
-            <div className='flex w-[40%] justify-between mx-6'>
+        <div className='flex flex-wrap w-full justify-between items-end gap-6 px-6'>
+            <div className='flex lg:w-[40%] w-full justify-between mx-6'>
                 <div className='flex flex-col'>
-                    <h3 className="text-xl font-bold">Atención al cliente</h3>
+                    <h3 className="text-md md:text-xl font-bold">Atención al cliente</h3>
                     <a href="">Link1</a>
                     <a href="">Link2</a>
                     <a href="">Link3</a>
                     <a href="">Link4</a>
                 </div>
                 <div className='flex flex-col'>
-                    <h3 className="text-xl font-bold">Sobre nosotros</h3>
+                    <h3 className="text-md md:text-xl font-bold">Sobre nosotros</h3>
                     <a href="">Link1</a>
                     <a href="">Link2</a>
                     <a href="">Link3</a>
                     <a href="">Link4</a>
                 </div>
                 <div className='flex flex-col'>
-                    <h3 className="text-xl font-bold">Legal</h3>
+                    <h3 className="text-md md:text-xl font-bold">Legal</h3>
                     <a href="">Link1</a>
                     <a href="">Link2</a>
                     <a href="">Link3</a>
@@ -138,10 +138,10 @@ const ParallaxSection = () => {
                         <p>TOP</p>
                     </div>
                 </div>
-                <div className="punto">
-                <svg className="w-3 h-3 text-black" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="60" cy="60" r="50" fill="black" stroke="currentColor" strokeWidth="1" />
-                </svg>
+                <div className="punto cursor-pointer">
+                    <svg className="w-3 h-3 text-black" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="50" fill="black" stroke="currentColor" strokeWidth="1" />
+                    </svg>
                 </div>
             </div>
         </div>
