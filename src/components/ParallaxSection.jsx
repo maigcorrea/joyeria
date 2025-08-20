@@ -107,8 +107,9 @@ const ParallaxSection = () => {
         {/* </div> */}
 
         <div className="w-full h-[1px] bg-black my-[65px]"></div>
-        
-        <div className='flex w-[40%] justify-between mx-6'>
+
+        <div className='flex w-full justify-between items-end px-6'>
+            <div className='flex w-[40%] justify-between mx-6'>
                 <div className='flex flex-col'>
                     <h3 className="text-xl font-bold">Atención al cliente</h3>
                     <a href="">Link1</a>
@@ -131,6 +132,19 @@ const ParallaxSection = () => {
                     <a href="">Link4</a>
                 </div>
             </div>
+            <div className='hoverTop flex items-center gap-4 mx-6'>
+                <div className="oculto">
+                    <div className="top">
+                        <p>TOP</p>
+                    </div>
+                </div>
+                <div className="punto">
+                <svg className="w-3 h-3 text-black" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="60" cy="60" r="50" fill="black" stroke="currentColor" strokeWidth="1" />
+                </svg>
+                </div>
+            </div>
+        </div>
       </div>
 
       {/* Indicador de scroll */}
