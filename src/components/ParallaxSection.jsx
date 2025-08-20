@@ -87,22 +87,47 @@ const ParallaxSection = () => {
       {/* Sección oculta que se revela */}
       <div 
         ref={hiddenSectionRef}
-        className="hiddenParallaxSection h-screen fixed top-0 left-0 w-full z-0 flex items-center bg-gray-400">
-        <div 
-          className={`text-black transition-all duration-600 ease-out ml-6 ${
-            isRevealed ? 'scale-100 translate-y-0 opacity-100' : 'scale-75 translate-y-12 opacity-0'
-          }`}
-        >
-          <h2 className="text-3xl lg:text-7xl md:text-5xl font-black mb-8 drop-shadow-xl tracking-tight">
-            Únete a nuestra newsletter
-          </h2>
-          <div className="flex items-center justify-start">
-            <input type="text" placeholder="Tu correo" className='absolute w-64 lg:w-full md:w-full p-4 rounded-r-4xl bg-white bg-opacity-20 outline-none' />
-            <div className="flex justify-end w-64 lg:w-full md:w-full ">
-                <button className="relative inline-block bg-black text-white box-border px-6 py-4 rounded-4xl cursor-pointer" onClick={handleClick}>Suscribirse</button>
+        className="hiddenParallaxSection h-screen fixed top-0 left-0 w-full z-0 flex flex-col items-start justify-center bg-gray-400">
+        {/* <div className="flex flex-wrap justify-between md:w-full"> */}
+            <div 
+            className={`text-black transition-all duration-600 ease-out ml-6 ${
+                isRevealed ? 'scale-100 translate-y-0 opacity-100' : 'scale-75 translate-y-12 opacity-0'
+            }`}
+            >
+                <h2 className="text-3xl lg:text-7xl md:text-5xl font-black mb-8 drop-shadow-xl tracking-tight">
+                    Únete a nuestra newsletter
+                </h2>
+                <div className="flex items-center justify-start">
+                    <input type="text" placeholder="Tu correo" className='absolute w-64 lg:w-full md:w-full p-4 rounded-r-4xl bg-white bg-opacity-20 outline-none' />
+                    <div className="flex justify-end w-64 lg:w-full md:w-full ">
+                        <button className="relative inline-block bg-black text-white box-border px-6 py-4 rounded-4xl cursor-pointer" onClick={handleClick}>Suscribirse</button>
+                    </div>
+                </div>
+            </div>           
+        {/* </div> */}
+        <div className='flex justify-between '>
+                <div className='flex flex-col'>
+                    <h3 className="text-xl font-bold">Atención al cliente</h3>
+                    <a href="">Link1</a>
+                    <a href="">Link2</a>
+                    <a href="">Link3</a>
+                    <a href="">Link4</a>
+                </div>
+                <div className='flex flex-col'>
+                    <h3 className="text-xl font-bold">Sobre nosotros</h3>
+                    <a href="">Link1</a>
+                    <a href="">Link2</a>
+                    <a href="">Link3</a>
+                    <a href="">Link4</a>
+                </div>
+                <div className='flex flex-col'>
+                    <h3 className="text-xl font-bold">Legal</h3>
+                    <a href="">Link1</a>
+                    <a href="">Link2</a>
+                    <a href="">Link3</a>
+                    <a href="">Link4</a>
+                </div>
             </div>
-          </div>
-        </div>
       </div>
 
       {/* Indicador de scroll */}
