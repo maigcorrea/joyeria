@@ -12,12 +12,8 @@ const MainSection = () => {
             {/* Top Text Block */}
             <div className="mb-8 pr-8">
               <p className="text-sm text-gray-700 leading-relaxed font-light">
-                Cada joya guarda una historia única:<br/>
-                la de un instante, un sentimiento, un recuerdo eterno.<br/>
-                transformamos la belleza en símbolos<br/>
-                que acompañan tu vida,<br/>
-                porque una joya no es solo un accesorio,<br/>
-                es un reflejo de lo que amas y de lo que eres.
+               Más allá del tiempo,<br />
+               más allá del lujo.
               </p>
             </div>
             

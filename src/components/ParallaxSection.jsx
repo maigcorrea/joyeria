@@ -54,13 +54,13 @@ const ParallaxSection = () => {
       {/* Sección superior que se superpone */}
       <div 
         ref={topSectionRef}
-        className="h-screen bg-white flex relative z-12 transition-transform duration-100 ease-out"
+        className="h-screen bg-white flex flex-wrap relative z-12 transition-transform duration-100 ease-out"
         style={{
           transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`,
         }}
       >
         <div 
-          className="bg-[url('../images/main1.png')] rounded-bl-[65px] bg-cover bg-center w-[50%] text-center text-black transition-all duration-300"
+          className="bg-[url('../images/main1.png')] rounded-t-[65px] md:rounded-t-[0px] md:rounded-bl-[65px] bg-cover bg-center md:w-[50%] w-full text-center text-black transition-all duration-300"
           style={{
             transform: `translateY(-${scrollProgress * 30}px)`
           }}
@@ -68,7 +68,7 @@ const ParallaxSection = () => {
 
         </div>
         <div 
-          className="bg-[url('../images/OrnateJewelry.png')] rounded-br-[65px] bg-cover w-[50%] text-center text-black transition-all duration-300"
+          className="bg-[url('../images/OrnateJewelry.png')] rounded-b-[65px] md:rounded-b-[0px] md:rounded-br-[65px] bg-cover md:w-[50%] w-full text-center text-black transition-all duration-300"
           style={{
             transform: `translateY(-${scrollProgress * 30}px)`
           }}
@@ -79,13 +79,13 @@ const ParallaxSection = () => {
 
       {/* Sección de contenido normal después del efecto */}
       <div 
-        className="min-h-screen bg-white flex items-center justify-center py-20 relative z-10"
+        className="h-fit md:h-screen bg-white flex items-center justify-center py-20 relative z-10"
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
          
         }}
       >
-        <div className="text-center max-w-4xl px-6">
+        {/* <div className="text-center max-w-4xl px-6">
           <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
             Contenido Normal
           </h2>
@@ -106,6 +106,14 @@ const ParallaxSection = () => {
               </div>
             ))}
           </div>
+        </div> */}
+        <div className='w-[50%]'>
+          <h2 className='text-center text-xl md:text-6xl text-gray-400 italic'>Cada joya guarda una historia única:
+                la de un instante, un sentimiento, un recuerdo eterno.
+                transformamos la belleza en símbolos
+                que acompañan tu vida,
+                porque una joya no es solo un accesorio,
+                es un reflejo de lo que amas y de lo que eres.</h2>
         </div>
       </div>
 
