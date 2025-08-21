@@ -60,13 +60,13 @@ const ParallaxFooter = () => {
       {/* Sección superior que se superpone */}
       <div 
         ref={topSectionRef}
-        className="h-screen rounded-b-[65px] bg-gradient-to-br bg-white flex items-center justify-center relative z-10 transition-transform duration-300 ease-out"
+        className="h-screen rounded-b-[65px] bg-gray-400 flex items-center relative z-10 transition-transform duration-300 ease-out"
         style={{
           transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`
         }}
       >
         <div 
-          className="text-center text-black transition-all duration-300"
+          className=" text-black transition-all duration-300"
           style={{
             transform: `translateY(-${scrollProgress * 30}px)`,
             opacity: 1 - scrollProgress * 0.5
