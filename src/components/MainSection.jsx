@@ -42,7 +42,7 @@ const MainSection = () => {
           <div className="col-span-4 flex justify-center items-center relative z-20">
             <div className="text-center ">
               <h1 className="text-[300px]/60 font-light tracking-wider  text-black drop-shadow-lg">
-                <span className="">hola Mundo</span>
+                <span className="">Élisée Jewerly</span>
               </h1>
             </div>
           </div>
