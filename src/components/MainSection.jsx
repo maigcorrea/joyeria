@@ -12,17 +12,17 @@ const MainSection = () => {
             {/* Top Text Block */}
             <div className="mb-8 pr-8">
               <p className="text-sm text-gray-700 leading-relaxed font-light">
-                A curadoria nk revisa as marcas mais<br/>
-                relevantes do cenário nacional e<br/>
-                internacional da moda, selecionadas pelo<br/>
-                nosso time de buyers, com olhar atento e<br/>
-                apurado aos nomes que merecem a sua<br/>
-                atenção.
+                Cada joya guarda una historia única:<br/>
+                la de un instante, un sentimiento, un recuerdo eterno.<br/>
+                transformamos la belleza en símbolos<br/>
+                que acompañan tu vida,<br/>
+                porque una joya no es solo un accesorio,<br/>
+                es un reflejo de lo que amas y de lo que eres.
               </p>
             </div>
             
             {/* Bottom Image */}
-            <div className="flex-1 relative bg-[url('../images/main1.png')] bg-cover bg-center rounded-lg overflow-hidden">
+            <div className="flex-1 relative bg-[url('../images/ElegantPortrait.png')] bg-cover bg-center rounded-lg overflow-hidden">
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div> */}
               {/* Model with bag - artistic representation */}
               {/* <div className="absolute bottom-8 left-8 right-8">
@@ -50,7 +50,7 @@ const MainSection = () => {
           {/* Right Column - Images */}
           <div className="col-span-4 flex flex-col gap-6">
             {/* Top Right Image */}
-            <div className="flex-1 w-[50%] bg-[url('../images/main2.png')] bg-cover rounded-lg relative overflow-hidden">
+            <div className="flex-1 w-[50%] bg-[url('../images/ElegantGold1.png')] bg-cover rounded-lg relative overflow-hidden">
               {/* Artistic representation of crouching figure */}
               {/* <div className="absolute bottom-8 right-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-300 to-amber-500 rounded-full mb-2"></div>
@@ -68,28 +68,27 @@ const MainSection = () => {
               </div>
               
               {/* Bottom Image */}
-              <div className="flex-1 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg relative overflow-hidden">
+              <div className="flex-1 rounded-lg  relative overflow-hidden">
                 {/* Artistic representation of close-up portrait */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
-                <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2">
-                  <div className="w-24 h-32 bg-gradient-to-b from-amber-300 to-amber-500 rounded-full"></div>
+                <div className="absolute inset-0 bg-[url('../images/ElegantHand.png')] bg-cover bg-center"></div>
+                {/* <div className="absolute bg-[url('../images/ElegantGemstoneEarrings.png')] top-1/3 left-1/2 transform -translate-x-1/2"> */}
+                  {/* <div className="w-24 h-32 bg-gradient-to-b from-amber-300 to-amber-500 rounded-full"></div>
                   <div className="w-32 h-6 bg-black rounded-lg mt-4 mx-auto"></div>
-                  <div className="w-20 h-4 bg-red-600 rounded-sm mt-2 mx-auto"></div>
-                </div>
+                  <div className="w-20 h-4 bg-red-600 rounded-sm mt-2 mx-auto"></div> */}
+                {/* </div> */}
               </div>
             </div>
           </div>
         </div>
         
         {/* Decorative Elements */}
-        <div className="absolute top-20 right-20 w-2 h-2 bg-black rounded-full opacity-30"></div>
-        <div className="absolute bottom-20 left-20 w-1 h-1 bg-red-600 rounded-full opacity-50"></div>
+        
         
         {/* Subtle grid overlay */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute inset-0 opacity-13 pointer-events-none z-[-2]">
           <div className="grid grid-cols-12 gap-6 h-full">
             {Array.from({length: 12}).map((_, i) => (
-              <div key={i} className="border-r border-gray-400"></div>
+              <div key={i} className="border-r border-gray-700"></div>
             ))}
           </div>
         </div>
