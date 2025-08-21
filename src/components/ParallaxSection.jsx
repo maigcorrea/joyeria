@@ -159,13 +159,13 @@ const ParallaxSection = () => {
 
       {/* Indicador de scroll */}
       <div 
-        className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 text-white text-center z-20 cursor-pointer transition-opacity duration-300 ${
+        className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 text-gray-500 text-center z-50 cursor-pointer transition-opacity duration-300 ${
           showScrollIndicator ? 'opacity-100' : 'opacity-0'
         }`}
         onClick={handleScrollIndicatorClick}
       >
         <p className="mb-2">Scroll</p>
-        <div className="w-8 h-8 border-r-2 border-b-2 border-white transform rotate-45 mx-auto animate-bounce"></div>
+        <div className="w-8 h-8 border-r-2 border-b-2 border-gray-500 transform rotate-45 mx-auto animate-bounce"></div>
       </div>
     </div>
   );
