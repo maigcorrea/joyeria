@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import ParallaxFooter from './ParallaxFooter';
 
 const ParallaxSection = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -16,7 +17,7 @@ const ParallaxSection = () => {
       const windowHeight = window.innerHeight;
       
       // Calcular el progreso del scroll (0 a 1)
-      const progress = Math.min(scrollY / windowHeight, 1);
+      const progress = Math.min(scrollY / (windowHeight * 1.5), 1);
       setScrollProgress(progress);
       
       // Revelar contenido oculto cuando el scroll supera el 20%
@@ -53,7 +54,7 @@ const ParallaxSection = () => {
       {/* Sección superior que se superpone */}
       <div 
         ref={topSectionRef}
-        className="h-screen rounded-b-[65px] bg-gradient-to-br flex relative z-10 transition-transform duration-300 ease-out"
+        className="h-screen bg-white flex relative z-10 transition-transform duration-300 ease-out"
         style={{
           transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`
         }}
@@ -76,53 +77,63 @@ const ParallaxSection = () => {
         </div>
       </div>
 
-      {/* Contenido que se revela debajo */}
+      {/* Sección de contenido normal después del efecto */}
       <div 
-          className="absolute inset-0 bg-white z-5"
-          style={{
-            transform: `translateY(${100 - (scrollProgress * ALTURA_FOOTER)}vh)`,
-            transition: 'transform 0.3s ease-out'
-          }}
-        >
-          <div className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-            <div className="text-center">
-              <h2 className="text-5xl font-bold text-gray-800 mb-6">Nueva Sección</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Esta sección aparece conforme la anterior se desplaza hacia arriba. 
-                Ya no hay espacio vacío, sino contenido continuo.
-              </p>
-            </div>
+        className="min-h-screen bg-white flex items-center justify-center py-20 relative z-10"
+        style={{
+          transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
+         
+        }}
+      >
+        <div className="text-center max-w-4xl px-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+            Contenido Normal
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+            Aquí continúa el contenido normal de tu página web. El efecto parallax ya ha terminado 
+            y ahora puedes seguir con el resto de tu contenido.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            {[
+              { title: "Efecto Suave", desc: "Transición fluida y natural" },
+              { title: "Responsivo", desc: "Funciona en todos los dispositivos" },
+              { title: "Optimizado", desc: "Rendimiento y experiencia perfecta" }
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-
-{/* Contenido adicional después del efecto parallax */}
-<div className="bg-white">
-        <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center">
-          <div className="text-center p-8">
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">Contenido Normal</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Aquí continúa el resto de tu página de forma normal. Este contenido 
-              aparece después del efecto parallax y se comporta como una sección 
-              estándar de la página.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">Característica 1</h3>
-                <p className="text-gray-600">Descripción de la primera característica o servicio.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">Característica 2</h3>
-                <p className="text-gray-600">Descripción de la segunda característica o servicio.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">Característica 3</h3>
-                <p className="text-gray-600">Descripción de la tercera característica o servicio.</p>
-              </div>
-            </div>
-          </div>
+            {/* Otra sección para más contenido */}
+      <div 
+        className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center py-20 relative z-10"
+        style={{
+          transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
+          transition: 'transform 0.3s ease-out'
+        }}
+      >
+        <div className="text-center max-w-4xl px-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-indigo-800 mb-6">
+            Más Contenido
+          </h2>
+          <p className="text-lg md:text-xl text-indigo-600 leading-relaxed">
+            Puedes seguir agregando más secciones y contenido después del efecto parallax. 
+            El scroll funcionará de manera normal en estas secciones.
+          </p>
         </div>
+      </div>
+
+      <div 
+        
+      >
+        <ParallaxFooter />
+      </div>
+
       </div>
         
 
