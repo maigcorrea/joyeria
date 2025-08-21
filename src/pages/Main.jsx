@@ -9,6 +9,8 @@ const MainPage = () => {
       <MainSection />
       {/* <ParallaxFooter /> */}
       <ParallaxSection />
+      {/* <ParallaxFooter></ParallaxFooter> */}
+      
     </>
   )
 }
