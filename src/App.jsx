@@ -1,12 +1,22 @@
 import { useState } from 'react'
 import './App.css'
-import ParallaxSection from './components/ParallaxSection'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Layout from './layout/Layout'
+import MainPage from './pages/Main'
+import BestSellers from './pages/BestSellers'
 
 function App() {
 
   return (
     <>
-     <ParallaxSection></ParallaxSection> 
+     <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />} >
+          <Route index element={<MainPage />} />
+          <Route path='best' element={<BestSellers />}/>
+        </Route>
+      </Routes>
+     </BrowserRouter>
     </>
   )
 }

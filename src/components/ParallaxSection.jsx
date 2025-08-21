@@ -8,6 +8,7 @@ const ParallaxSection = () => {
   const hiddenSectionRef = useRef(null);
   const [contador, setContador] = useState(0);
   const [vissibility, setVissibility] = useState(false);
+  const ALTURA_FOOTER = 50;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +75,7 @@ const ParallaxSection = () => {
         ref={topSectionRef}
         className="h-screen rounded-b-[65px] bg-gradient-to-br bg-white flex items-center justify-center relative z-10 transition-transform duration-300 ease-out"
         style={{
-          transform: `translateY(${scrollProgress * -100}vh)`
+          transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`
         }}
       >
         <div 
@@ -96,7 +97,7 @@ const ParallaxSection = () => {
       {/* Sección oculta que se revela */}
       <div 
         ref={hiddenSectionRef}
-        className="hiddenParallaxSection h-screen fixed top-0 left-0 w-full z-0 flex flex-col items-start justify-center bg-gray-200 px-6">
+        className="hiddenParallaxSection h-[60vh] pb-25 pt-55 fixed bottom-0 left-0 w-full z-0 flex flex-col items-start justify-center bg-gray-200 px-6">
         {/* <div className="flex flex-wrap justify-between md:w-full"> */}
             <div 
             className={`text-black transition-all duration-600 ease-out ml-6 ${
@@ -168,30 +169,6 @@ const ParallaxSection = () => {
         <p className="mb-2">Scroll</p>
         <div className="w-8 h-8 border-r-2 border-b-2 border-white transform rotate-45 mx-auto animate-bounce"></div>
       </div>
-
-      {/* CSS personalizado para las animaciones */}
-      {/* <style jsx>{`
-        @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        
-        .rotate-x-90 {
-          transform: rotateX(90deg) translateY(100px);
-        }
-        
-        .rotate-x-0 {
-          transform: rotateX(0deg) translateY(0px);
-        }
-        
-        @media (max-width: 768px) {
-          .letter-mobile {
-            font-size: 2rem !important;
-            padding: 15px 20px !important;
-          }
-        }
-      `}</style> */}
     </div>
   );
 };
