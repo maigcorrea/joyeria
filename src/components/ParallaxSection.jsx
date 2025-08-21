@@ -49,12 +49,10 @@ const ParallaxSection = () => {
   };
 
   const dotRevealVissibility = () => {
-    setVissibility(true);
+    vissibility ?
+    setVissibility(false) : setVissibility(true);
   }
 
-  const dotHideVissibility = () => {
-    setVissibility(false);
-  }
 
   return (
     <div className="relative">
@@ -110,7 +108,7 @@ const ParallaxSection = () => {
                 <div className="flex items-center justify-start">
                     <input type="text" placeholder="Tu correo" className='absolute w-full lg:w-full md:w-full p-4 rounded-r-4xl bg-white bg-opacity-20 outline-none' />
                     <div className="flex justify-end w-full lg:w-full md:w-full">
-                        <button className="relative inline-block bg-black text-white box-border px-6 py-4 rounded-4xl cursor-pointer" onClick={handleClick}>Suscribirse</button>
+                        <button className="relative inline-block bg-black text-white box-border px-6 py-4 rounded-4xl cursor-pointer transition-all hover:scale-110" onClick={handleClick}>Suscribirse</button>
                     </div>
                 </div>
             </div>           
@@ -148,7 +146,7 @@ const ParallaxSection = () => {
                         <p>TOP</p>
                     </div>
                 </div>
-                <div className="punto cursor-pointer" onMouseEnter={dotRevealVissibility} onMouseLeave={dotHideVissibility}>
+                <div className="punto cursor-pointer" onMouseEnter={dotRevealVissibility} onMouseLeave={dotRevealVissibility}>
                   <a href="#top">
                     <svg className="w-3 h-3 text-black" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="60" cy="60" r="50" fill="black" stroke="currentColor" strokeWidth="1" />
