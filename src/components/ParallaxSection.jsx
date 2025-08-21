@@ -48,15 +48,15 @@ const ParallaxSection = () => {
   return (
     <div className="relative">
       {/* Container con altura fija para mantener el espacio durante el scroll */}
-      <div className="relative h-screen ">
+      <div className="relative h-screen bg-white ">
 
 
       {/* Sección superior que se superpone */}
       <div 
         ref={topSectionRef}
-        className="h-screen bg-white flex relative z-10 transition-transform duration-300 ease-out"
+        className="h-screen bg-white flex relative z-12 transition-transform duration-300 ease-out"
         style={{
-          transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`
+          transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`,
         }}
       >
         <div 
@@ -81,7 +81,7 @@ const ParallaxSection = () => {
       <div 
         className="min-h-screen bg-white flex items-center justify-center py-20 relative z-10"
         style={{
-          transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
+          transform: `translateY(-${scrollProgress * 60}vh)`,
          
         }}
       >
@@ -111,7 +111,7 @@ const ParallaxSection = () => {
 
             {/* Otra sección para más contenido */}
       <div 
-        className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center py-20 relative z-10"
+        className="min-h-screen  bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center py-20 relative z-10"
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
           transition: 'transform 0.3s ease-out'
