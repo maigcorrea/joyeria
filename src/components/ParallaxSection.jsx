@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import ParallaxFooter from './ParallaxFooter';
+import FloatingImages from './FloatingImages';
 
 const ParallaxSection = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -119,7 +120,7 @@ const ParallaxSection = () => {
 
             {/* Otra sección para más contenido */}
       <div 
-        className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center py-20 relative z-10"
+        className="min-h-screen bg-white flex items-center justify-center py-20 relative z-10"
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
           transition: 'transform 0.3s ease-out'
@@ -134,8 +135,10 @@ const ParallaxSection = () => {
             El scroll funcionará de manera normal en estas secciones.
           </p>
         </div>
+        
       </div>
 
+      
       <div 
         
       >
