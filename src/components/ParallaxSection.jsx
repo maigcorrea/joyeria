@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import MainSection from './MainSection';
 
 const ParallaxSection = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -57,7 +58,7 @@ const ParallaxSection = () => {
   return (
     <div className="relative">
         {/* Sección inicial */}
-      <div className="h-screen bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative z-5">
+      {/* <div className="h-screen bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative z-5">
         <div className="text-center text-white">
           <h3 className="text-3xl md:text-5xl font-bold mb-4">
             Efecto Completado
@@ -66,7 +67,8 @@ const ParallaxSection = () => {
             Has experimentado el efecto parallax de revelación con scroll
           </p>
         </div>
-      </div>
+      </div> */}
+      <MainSection />
 
       {/* Sección superior que se superpone */}
       <div 
