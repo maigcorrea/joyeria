@@ -25,3 +25,12 @@
       padding: 15px 20px !important;
     }
   }
+
+
+  /* Efecto dither */
+  .pruebaa{
+    background-image: radial-gradient(transparent 1px, rgb(0, 0, 0) 1px);
+    background-size: 4px 4px;
+    backdrop-filter:blur(3px);
+    mask: linear-gradient(#000 calc(100% - 20px), #0000);
+  }
