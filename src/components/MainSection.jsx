@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const MainSection = () => {
   return (
@@ -18,7 +19,12 @@ const MainSection = () => {
             </div>
             
             {/* Bottom Image */}
-            <div className="flex-1 relative bg-[url('../images/ElegantPortrait.png')] bg-cover bg-center rounded-lg overflow-hidden">
+            <motion.div 
+              className="flex-1 relative bg-[url('../images/ElegantPortrait.png')] bg-cover bg-center rounded-lg overflow-hidden"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div> */}
               {/* Model with bag - artistic representation */}
               {/* <div className="absolute bottom-8 left-8 right-8">
@@ -30,8 +36,7 @@ const MainSection = () => {
                 <div className="w-24 h-24 bg-gradient-to-br from-amber-200 to-amber-400 rounded-full"></div>
                 <div className="w-48 h-16 bg-gradient-to-r from-black to-gray-700 rounded-full mt-4 transform -rotate-12"></div>
               </div> */}
-              
-            </div>
+            </motion.div>
           </div>
           
           {/* Center Column - Main Typography */}
@@ -46,14 +51,19 @@ const MainSection = () => {
           {/* Right Column - Images */}
           <div className="col-span-4 flex flex-col gap-6">
             {/* Top Right Image */}
-            <div className="flex-1 w-[50%] bg-[url('../images/ElegantGold1.png')] bg-cover rounded-lg relative overflow-hidden">
+            <motion.div 
+              className="flex-1 w-[50%] bg-[url('../images/ElegantGold1.png')] bg-cover rounded-lg relative overflow-hidden"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               {/* Artistic representation of crouching figure */}
               {/* <div className="absolute bottom-8 right-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-300 to-amber-500 rounded-full mb-2"></div>
                 <div className="w-32 h-48 bg-gradient-to-b from-red-700 to-red-900 rounded-lg shadow-xl"></div>
                 <div className="w-24 h-12 bg-black rounded-lg mt-2 shadow-lg"></div>
               </div> */}
-            </div>
+            </motion.div>
             
             {/* Bottom Right Section */}
             <div className="flex-1 flex flex-col">
@@ -64,7 +74,12 @@ const MainSection = () => {
               </div>
               
               {/* Bottom Image */}
-              <div className="flex-1 rounded-lg relative overflow-hidden">
+              <motion.div 
+                className="flex-1 rounded-lg relative overflow-hidden"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
                 {/* Artistic representation of close-up portrait */}
                 <div className="absolute inset-0 bg-[url('../images/ElegantHand.png')] bg-cover bg-center"></div>
                 {/* <div className="absolute bg-[url('../images/ElegantGemstoneEarrings.png')] top-1/3 left-1/2 transform -translate-x-1/2"> */}
@@ -72,7 +87,7 @@ const MainSection = () => {
                   <div className="w-32 h-6 bg-black rounded-lg mt-4 mx-auto"></div>
                   <div className="w-20 h-4 bg-red-600 rounded-sm mt-2 mx-auto"></div> */}
                 {/* </div> */}
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
