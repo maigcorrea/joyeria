@@ -63,65 +63,71 @@ const FloatingNavbar = () => {
       </nav>
       
       {/* Menú móvil de pantalla completa */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white md:hidden overflow-hidden">
-          {/* Header del menú móvil */}
-          <div className="flex justify-between items-center p-6">
-            <div className="font-bold text-xl text-gray-800">
-              Jitter
-            </div>
-            <button 
+      <div className={`fixed inset-0 z-50 bg-white md:hidden transition-transform duration-300 ease-in-out ${
+        isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+      }`}>
+        {/* Header del menú móvil */}
+        <div className={`flex justify-between items-center p-6 transition-opacity duration-300 delay-100 ${
+          isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <div className="font-bold text-xl text-gray-800">
+            Jitter
+          </div>
+          <button 
+            onClick={toggleMobileMenu}
+            className="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+          >
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Enlaces del menú móvil */}
+        <div className={`px-6 pt-8 transition-opacity duration-300 delay-200 ${
+          isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <div className="space-y-8">
+            <a 
+              href="#" 
+              className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
               onClick={toggleMobileMenu}
-              className="w-10 h-10 bg-black rounded-full flex items-center justify-center"
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          
-          {/* Enlaces del menú móvil */}
-          <div className="px-6 pt-8">
-            <div className="space-y-8">
-              <a 
-                href="#" 
-                className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-colors duration-200"
-                onClick={toggleMobileMenu}
-              >
-                Product
-              </a>
-              <a 
-                href="#" 
-                className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-colors duration-200"
-                onClick={toggleMobileMenu}
-              >
-                Customers
-              </a>
-              <a 
-                href="#" 
-                className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-colors duration-200"
-                onClick={toggleMobileMenu}
-              >
-                Templates
-              </a>
-              <a 
-                href="#" 
-                className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-colors duration-200"
-                onClick={toggleMobileMenu}
-              >
-                Pricing
-              </a>
-            </div>
-          </div>
-          
-          {/* Botón flotante de ayuda */}
-          <div className="fixed bottom-6 right-6">
-            <button className="w-12 h-12 bg-black rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-lg">?</span>
-            </button>
+              Product
+            </a>
+            <a 
+              href="#" 
+              className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
+              onClick={toggleMobileMenu}
+            >
+              Customers
+            </a>
+            <a 
+              href="#" 
+              className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
+              onClick={toggleMobileMenu}
+            >
+              Templates
+            </a>
+            <a 
+              href="#" 
+              className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
+              onClick={toggleMobileMenu}
+            >
+              Pricing
+            </a>
           </div>
         </div>
-      )}
+        
+        {/* Botón flotante de ayuda */}
+        <div className={`fixed bottom-6 right-6 transition-opacity duration-300 delay-300 ${
+          isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <button className="w-12 h-12 bg-black rounded-full flex items-center justify-center shadow-lg hover:bg-gray-800 transition-colors duration-200">
+            <span className="text-white font-bold text-lg">?</span>
+          </button>
+        </div>
+      </div>
       
       {/* Overlay para bloquear scroll cuando el menú está abierto */}
       <div className={`${isMobileMenuOpen ? 'overflow-hidden h-screen' : ''}`}>
