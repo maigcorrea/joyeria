@@ -135,7 +135,7 @@ const ParallaxFooter = () => {
                         <p>TOP</p>
                     </div>
                 </div>
-                <div className="punto cursor-pointer" onMouseEnter={dotRevealVissibility} onMouseLeave={dotRevealVissibility}>
+                <div className="punto cursor-pointer opacity-0 md:opacity-100" onMouseEnter={dotRevealVissibility} onMouseLeave={dotRevealVissibility}>
                   <a href="#top">
                     <svg className="w-3 h-3 text-black" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="60" cy="60" r="50" fill="black" stroke="currentColor" strokeWidth="1" />
