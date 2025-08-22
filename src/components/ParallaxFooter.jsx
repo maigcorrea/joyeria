@@ -103,7 +103,8 @@ const ParallaxFooter = () => {
             </div>           
         {/* </div> */}
 
-        <div className="w-full h-[1px] bg-black my-[65px]"></div>
+        {/* Línea decorativa */}
+        <div className="w-full h-[1px] bg-black flex-shrink-0 my-6"></div>
 
         <div className='flex flex-wrap w-full justify-between items-end gap-6 px-6'>
             <div className='flex lg:w-[40%] w-full justify-between mx-6'>
