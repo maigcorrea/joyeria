@@ -37,7 +37,7 @@ const MainSection = () => {
           {/* Center Column - Main Typography */}
           <div className="col-span-4 flex justify-center items-center relative z-20">
             <div className="text-center ">
-              <h1 className="text-[300px]/60 font-light tracking-wider  text-black drop-shadow-lg">
+              <h1 className="text-[90px] leading-19 lg:text-[300px]/60 font-light tracking-wider  text-black drop-shadow-lg">
                 <span className="">Élisée Jewerly</span>
               </h1>
             </div>
@@ -64,7 +64,7 @@ const MainSection = () => {
               </div>
               
               {/* Bottom Image */}
-              <div className="flex-1 rounded-lg  relative overflow-hidden">
+              <div className="flex-1 rounded-lg relative overflow-hidden">
                 {/* Artistic representation of close-up portrait */}
                 <div className="absolute inset-0 bg-[url('../images/ElegantHand.png')] bg-cover bg-center"></div>
                 {/* <div className="absolute bg-[url('../images/ElegantGemstoneEarrings.png')] top-1/3 left-1/2 transform -translate-x-1/2"> */}
