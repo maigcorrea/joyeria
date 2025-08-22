@@ -112,14 +112,14 @@ export default function Index() {
     offset: ["start end", "end start"],
   });
 
-  const sm = useTransform(scrollYProgress, [0, 1], [0, -50]);
-  const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
-  const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
+  const sm = useTransform(scrollYProgress, [0, 1], [0, -50]); //50
+  const md = useTransform(scrollYProgress, [0, 1], [0, -450]); //150
+  const lg = useTransform(scrollYProgress, [0, 1], [0, -650]); //250
 
   const data = [
     { src: images[0], y: 0 },
-    { src: images[1], y: lg },
-    { src: images[2], y: md },
+    { src: images[1], y: md },
+    { src: images[2], y: lg }, //md
   ];
 
   return (
