@@ -37,7 +37,7 @@
 
 
   /* Círculo rodante */
-  .circular-text {
+  /* .circular-text {
     margin: 0 auto;
     border-radius: 50%;
     width: 200px;
@@ -61,4 +61,4 @@
     bottom: 0;
     font-size: 24px;
     transition: all 0.5s cubic-bezier(0, 0, 0, 1);
-  }
+  } */
