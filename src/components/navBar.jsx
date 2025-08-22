@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const FloatingNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -6,6 +6,20 @@ const FloatingNavbar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // Bloquear/desbloquear scroll del body
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup: restaurar scroll cuando el componente se desmonte
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <div className="bg-gray-50">
@@ -131,7 +145,6 @@ const FloatingNavbar = () => {
       
       {/* Overlay para bloquear scroll cuando el menú está abierto */}
       <div className={`${isMobileMenuOpen ? 'overflow-hidden h-screen' : ''}`}>
-      
       
     </div>
     </div>
