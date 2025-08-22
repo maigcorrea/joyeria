@@ -109,24 +109,24 @@ const ParallaxFooter = () => {
             <div className='flex lg:w-[40%] w-full justify-between mx-6'>
                 <div className='flex flex-col'>
                     <h3 className="text-md md:text-xl font-bold">Atención al cliente</h3>
-                    <a href="">Link1</a>
-                    <a href="">Link2</a>
-                    <a href="">Link3</a>
-                    <a href="">Link4</a>
+                    <a href="">Tallas</a>
+                    <a href="">Devoluciones</a>
+                    <a href="">Garantía</a>
+                    <a href="">FAQs</a>
                 </div>
                 <div className='flex flex-col'>
                     <h3 className="text-md md:text-xl font-bold">Sobre nosotros</h3>
-                    <a href="">Link1</a>
-                    <a href="">Link2</a>
-                    <a href="">Link3</a>
-                    <a href="">Link4</a>
+                    <a href="">Historia</a>
+                    <a href="">Contacto</a>
+                    <a href="">Solidaridad</a>
+                    <a href="">Ubicación</a>
                 </div>
                 <div className='flex flex-col'>
                     <h3 className="text-md md:text-xl font-bold">Legal</h3>
-                    <a href="">Link1</a>
-                    <a href="">Link2</a>
-                    <a href="">Link3</a>
-                    <a href="">Link4</a>
+                    <a href="">Privacidad</a>
+                    <a href="">Cookies</a>
+                    <a href="">Aviso legal</a>
+                    <a href="">Blog</a>
                 </div>
             </div>
             <div className={`hoverTop flex items-center gap-4 mx-6`}>
@@ -148,12 +148,12 @@ const ParallaxFooter = () => {
 
       {/* Indicador de scroll */}
       <div 
-        className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 text-gray-500 text-center z-50 cursor-pointer transition-opacity duration-300 ${
+        className={`indicador fixed bottom-8 left-1/2 transform -translate-x-1/2 text-gray-500 text-center z-20 cursor-pointer transition-opacity duration-300 ${
           showScrollIndicator ? 'opacity-100' : 'opacity-0'
         }`}
         onClick={handleScrollIndicatorClick}
       >
-        <p className="mb-2">Scroll</p>
+        <p className="mb-6">Scroll</p>
         <div className="w-8 h-8 border-r-2 border-b-2 border-gray-500 transform rotate-45 mx-auto animate-bounce"></div>
       </div>
     </div>

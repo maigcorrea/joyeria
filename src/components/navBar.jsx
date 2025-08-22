@@ -28,7 +28,7 @@ const FloatingNavbar = () => {
         <div className="bg-white rounded-full shadow-lg px-6 py-3 flex items-center space-x-8">
           {/* Logo */}
           <div className="font-bold text-xl text-gray-800">
-            Jitter
+            Élisée
           </div>
           
           {/* Enlaces de navegación */}
@@ -37,36 +37,30 @@ const FloatingNavbar = () => {
               href="#" 
               className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
             >
-              Product
+              Marcas
             </a>
             <a 
               href="#" 
               className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
             >
-              Customers
+              Relojería
             </a>
             <a 
               href="#" 
               className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
             >
-              Templates
-            </a>
-            <a 
-              href="#" 
-              className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
-            >
-              Pricing
+              Novedades
             </a>
           </div>
           
           {/* Botón My files */}
           <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200 font-medium">
-            My files
+            Más vendidos
           </button>
           
           {/* Menú hamburguesa para móvil */}
           <button 
-            className="md:hidden p-2"
+            className="md:hidden p-2 cursor-pointer"
             onClick={toggleMobileMenu}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,11 +79,11 @@ const FloatingNavbar = () => {
           isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
         }`}>
           <div className="font-bold text-xl text-gray-800">
-            Jitter
+            Élisée
           </div>
           <button 
             onClick={toggleMobileMenu}
-            className="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+            className="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors duration-200 cursor-pointer"
           >
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -101,34 +95,27 @@ const FloatingNavbar = () => {
         <div className={`px-6 pt-8 transition-opacity duration-300 delay-200 ${
           isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
         }`}>
-          <div className="space-y-8">
+          <div className="space-y-44 text-6xl">
             <a 
               href="#" 
-              className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
+              className="block font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
               onClick={toggleMobileMenu}
             >
-              Product
+              Marcas
             </a>
             <a 
               href="#" 
-              className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
+              className="block font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
               onClick={toggleMobileMenu}
             >
-              Customers
+              Relojería
             </a>
             <a 
               href="#" 
-              className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
+              className="block font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
               onClick={toggleMobileMenu}
             >
-              Templates
-            </a>
-            <a 
-              href="#" 
-              className="block text-4xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-200 transform hover:translate-x-2"
-              onClick={toggleMobileMenu}
-            >
-              Pricing
+              Novedades
             </a>
           </div>
         </div>
@@ -137,7 +124,7 @@ const FloatingNavbar = () => {
         <div className={`fixed bottom-6 right-6 transition-opacity duration-300 delay-300 ${
           isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
         }`}>
-          <button className="w-12 h-12 bg-black rounded-full flex items-center justify-center shadow-lg hover:bg-gray-800 transition-colors duration-200">
+          <button className="w-12 h-12 bg-black rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:bg-gray-800 transition-colors duration-200">
             <span className="text-white font-bold text-lg">?</span>
           </button>
         </div>
