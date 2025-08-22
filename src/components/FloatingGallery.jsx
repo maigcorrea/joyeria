@@ -85,6 +85,9 @@ const word = "with framer-motion";
 
 function Letter({ char, progress }) {
   // offset aleatorio estable por letra (no cambia entre renders)
+  // Cada letra obtiene un offset aleatorio estable (guardado en useRef).
+  // Mapear progress a top desplaza cada letra distinto → micro-parallax divertido.
+  // En CSS, el span es position: relative para que top surta efecto.
   const offsetRef = useRef(Math.floor(Math.random() * -75) - 25);
   const y = useTransform(progress, [0, 1], [0, offsetRef.current]);
   return <motion.span style={{ top: y }}>{char}</motion.span>;
@@ -94,11 +97,14 @@ function FMImage({ src, y }) {
   // Si en tu entorno 'src' fuese un import (objeto), usar src.src
   const url = typeof src === "string" ? src : src?.src;
   return (
+    // .imageContainer es absolute y tiene alto/ancho definidos (por :nth-of-type).
+    // Dentro, el <img> es absolute con inset: 0; width/height: 100%; object-fit: cover;
+    // → equivalente a un “fill + cover” en nextjs.
     <motion.div style={{ y }} className={styles.imageContainer}>
       <img
         src={url}
         alt="image"
-        className={styles.blurUp}
+        className={styles.blurUp} //Empieza con desenfoque y un pelín de escala; al cargar, se quita la clase → transición suave.
         onLoad={(e) => e.currentTarget.classList.remove(styles.blurUp)}
       />
     </motion.div>
@@ -108,24 +114,32 @@ function FMImage({ src, y }) {
 export default function Index() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end start"],
+    target: container, // el área de la que sacas el progreso es tu sección (ref={container})
+    // offset: define cuándo es 0 y cuándo es 1.
+    // "start end" → progreso = 0 cuando el top del contenedor toca el bottom del viewport.
+    // "end start" → progreso = 1 cuando el bottom del contenedor toca el top del viewport.
+    offset: ["start end", "end start"], // el movimiento empieza cuando el elemento está por debajo de la sección (start) y termina cuando está por encima (end)
+
+    // Resultado: scrollYProgress es un MotionValue que va de 0 → 1 mientras esa sección “cruza” la ventana.
   });
 
+  // valores para el movimiento de las imágenes, los números negativos suben el elemento (translateY(-px)).
+  // useTransform mapea 0..1 a píxeles de y (traducción vertical).
+  // Capas “cercanas” se mueven más (p. ej. lg = -250) y “lejanas” menos (sm = -50). Esa diferencia de velocidades es el parallax.
   const sm = useTransform(scrollYProgress, [0, 1], [0, -50]); //50
   const md = useTransform(scrollYProgress, [0, 1], [0, -450]); //150
   const lg = useTransform(scrollYProgress, [0, 1], [0, -650]); //250
 
   const data = [
-    { src: images[0], y: 0 },
-    { src: images[1], y: md },
-    { src: images[2], y: lg }, //md
+    { src: images[0], y: 0 }, // fija
+    { src: images[1], y: lg }, //Se mueve más → sensación de que está “más cerca”.
+    { src: images[2], y: md }, // intermedia
   ];
 
   return (
     <div ref={container} className={styles.container}>
       <div className={styles.body}>
-        <motion.h1 style={{ y: sm }}>Parallax</motion.h1>
+        <motion.h1 style={{ y: sm }}>Parallax</motion.h1> {/*Se mueve poco → sensación de que está “más lejos”.*/}
         <h1>Scroll</h1>
         <div className={styles.word}>
           <p>
