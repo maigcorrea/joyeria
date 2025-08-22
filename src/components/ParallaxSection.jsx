@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import ParallaxFooter from './ParallaxFooter';
 import FloatingImages from './FloatingImages';
+import Index from './FloatingGallery';
 
 const ParallaxSection = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -120,21 +121,13 @@ const ParallaxSection = () => {
 
             {/* Otra sección para más contenido */}
       <div 
-        className="min-h-screen bg-white flex items-center justify-center py-20 relative z-10"
+        className="min-h-screen bg-white py-20 relative z-10"
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
           transition: 'transform 0.3s ease-out'
         }}
       >
-        <div className="text-center max-w-4xl px-6">
-          <h2 className="text-4xl md:text-6xl font-bold text-indigo-800 mb-6">
-            Más Contenido
-          </h2>
-          <p className="text-lg md:text-xl text-indigo-600 leading-relaxed">
-            Puedes seguir agregando más secciones y contenido después del efecto parallax. 
-            El scroll funcionará de manera normal en estas secciones.
-          </p>
-        </div>
+        <Index></Index>
         
       </div>
 
