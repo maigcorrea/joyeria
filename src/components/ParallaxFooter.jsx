@@ -4,7 +4,7 @@ const ParallaxFooter = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
-  const topSectionRef = useRef(null);
+  const topFooterSectionRef = useRef(null);
   const hiddenSectionRef = useRef(null);
   const [contador, setContador] = useState(0);
   const [vissibility, setVissibility] = useState(false);
@@ -59,14 +59,14 @@ const ParallaxFooter = () => {
 
       {/* Sección superior que se superpone */}
       <div 
-        ref={topSectionRef}
-        className="h-[40vh] rounded-b-[65px] bg-white flex items-center relative z-10 transition-transform duration-300 ease-out"
+        ref={topFooterSectionRef}
+        className="h-[40vh] rounded-b-[65px] bg-black flex items-center relative z-10 transition-transform duration-300 ease-out"
         style={{
           transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`
         }}
       >
         <div 
-          className=" text-grey-400 transition-all duration-300"
+          className=" text-gray-400 transition-all duration-300"
           style={{
             transform: `translateY(-${scrollProgress * 30}px)`,
             opacity: 1 - scrollProgress * 0.5
