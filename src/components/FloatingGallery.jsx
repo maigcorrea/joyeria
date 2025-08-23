@@ -68,13 +68,24 @@ export default function Index() {
   const md = useTransform(scrollYProgress, [0, 1], [0, -450]); //150
   const lg = useTransform(scrollYProgress, [0, 1], [0, -650]); //250
 
+  // // SCALE: cercano ~1.06→0.98, medio ~1.03→0.95, lejano ~1.0→0.92
+  // const smScale = useTransform(scrollYProgress, [0, 1], [1.00, 0.98]);
+  // const mdScale = useTransform(scrollYProgress, [0, 1], [1.03, 0.95]);
+  // const lgScale = useTransform(scrollYProgress, [0, 1], [1.06, 0.92]);
+
+  // // OPACITY: cercano ~1→0.9, medio ~0.95→0.75, lejano ~0.9→0.6
+  // const smOpacity = useTransform(scrollYProgress, [0, 1], [1.0, 0.9]);
+  // const mdOpacity = useTransform(scrollYProgress, [0, 1], [0.95, 0.5]);
+  // const lgOpacity = useTransform(scrollYProgress, [0, 1], [0.9, 0.6]);
+
+
   const data = [
     { src: images[0], y: 0 }, // fija, no hay enlace
-    { src: images[1], y: lg, enlace:"#e1" }, //Se mueve más → sensación de que está “más cerca”.
+    { src: images[1], y: lg, enlace:"#e1" }, //Se mueve más en y → sensación de que está “más cerca” pero se “va lejos”: menos escala y menos opaco
     { src: images[2], y: md, enlace:"#e2" }, // intermedia
     { src: images[3], y: md, enlace:"#e3" },
     { src: images[4], y: md, enlace:"#e4" }, 
-    { src: images[5], y: sm}, 
+    { src: images[5], y: sm}, // Sensacióin de que está más lejos al moverse menos, menos escala y menos opaco
     { src: images[6], y:sm}
   ];
 

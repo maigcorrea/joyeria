@@ -31,6 +31,7 @@
         .imageContainer{
             position: absolute;
             overflow: hidden;
+            will-change: transform;
             img{
                 position: absolute;
                 inset: 0;
