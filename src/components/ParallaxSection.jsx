@@ -87,28 +87,6 @@ const ParallaxSection = () => {
          
         }}
       >
-        {/* <div className="text-center max-w-4xl px-6">
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-            Contenido Normal
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
-            Aquí continúa el contenido normal de tu página web. El efecto parallax ya ha terminado 
-            y ahora puedes seguir con el resto de tu contenido.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {[
-              { title: "Efecto Suave", desc: "Transición fluida y natural" },
-              { title: "Responsivo", desc: "Funciona en todos los dispositivos" },
-              { title: "Optimizado", desc: "Rendimiento y experiencia perfecta" }
-            ].map((item, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div> */}
         <div className='w-[50%]'>
           <h2 className='text-center text-xl md:text-5xl lg:text-6xl text-gray-400 font-light tracking-wider italic'>Cada joya guarda una historia única:
                 la de un instante, un sentimiento, un recuerdo eterno.
