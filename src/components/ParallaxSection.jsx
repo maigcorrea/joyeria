@@ -121,7 +121,7 @@ const ParallaxSection = () => {
 
             {/* Otra sección para más contenido */}
       <div 
-        className="min-h-screen bg-white py-20 relative z-10"
+        className="min-h-screen bg-white overflow-x-hidden py-20 relative z-10"
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
           transition: 'transform 0.3s ease-out'
