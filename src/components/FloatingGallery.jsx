@@ -81,8 +81,8 @@ export default function Index() {
   return (
     <div ref={container} className={styles.container}>
       <div className={styles.body}>
-        <motion.h1 className="font-extralight tracking-wider text-gray-400" style={{ y: lg }}>Explora</motion.h1> {/*Se mueve poco → sensación de que está “más lejos”.*/}
-        <h1 className="font-extralight tracking-wider text-gray-400">nuestras categorías</h1>
+        <motion.h1 className="font-extralight tracking-wider text-gray-400 text-[20vw] leading-[18vw] md:text-[10vw] md:leading-[5vw]" style={{ y: lg }}>Explora</motion.h1> {/*Se mueve poco → sensación de que está “más lejos”.*/}
+        <h1 className="font-extralight tracking-wider text-gray-400 text-[5vw]">nuestras categorías</h1>
         <div className={styles.word}>
           <p>
             {word.split("").map((ch, i) => (
