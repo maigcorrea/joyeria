@@ -110,7 +110,7 @@ const ParallaxSection = () => {
           </div>
         </div> */}
         <div className='w-[50%]'>
-          <h2 className='text-center text-xl md:text-6xl text-gray-400 font-light tracking-wider italic'>Cada joya guarda una historia única:
+          <h2 className='text-center text-xl md:text-5xl lg:text-6xl text-gray-400 font-light tracking-wider italic'>Cada joya guarda una historia única:
                 la de un instante, un sentimiento, un recuerdo eterno.
                 transformamos la belleza en símbolos
                 que acompañan tu vida,
