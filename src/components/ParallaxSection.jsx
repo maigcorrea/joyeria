@@ -64,7 +64,7 @@ const ParallaxSection = () => {
           // La mitad del contenedor está en el top cuando:
           // containerTop + (containerHeight / 2) <= 0
           // Simplificado: containerTop <= -(containerHeight / 2)
-          const halfReachedTop = containerTop <= -(containerHeight / 12);
+          const halfReachedTop = containerTop <= -(containerHeight / 10);
           
           if (entry.target === targetSectionRef.current) {
             if (halfReachedTop && containerTop > -containerHeight) {
@@ -123,14 +123,14 @@ const ParallaxSection = () => {
       // Cuando se activa, todos cambian de color
       switch (sectionName) {
         case 'section1': return 'bg-red-500';
-        case 'section2': return 'transition-[background-color] duration-700 bg-black';
+        case 'section2': return 'transition-[background-color] duration-700 bg-white';
         case 'section3': return 'bg-blue-500';
-        case 'target': return 'transition-[background-color] duration-700 bg-black';
-        default: return 'transition-[background-color] duration-700 bg-white';
+        case 'target': return 'transition-[background-color] duration-700 bg-white';
+        default: return 'transition-[background-color] duration-300 bg-white';
       }
     }
     // Colores por defecto
-    return 'transition-[background-color] duration-700 bg-white';
+    return 'transition-[background-color] duration-300 bg-white';
   };
 
   return (
@@ -142,13 +142,13 @@ const ParallaxSection = () => {
       {/* Sección superior que se superpone */}
       <div 
         ref={topSectionRef}
-        className="h-screen bg-white flex flex-wrap relative z-12 transition-transform duration-100 ease-out"
+        className="h-screen bg-white flex flex-wrap relative z-12 transition-transform duration-100 ease-out will-change-transform"
         style={{
           transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`,
         }}
       >
         <div 
-          className="bg-[url('../images/main1.png')] rounded-t-[65px] md:rounded-t-[0px] md:rounded-bl-[65px] bg-cover bg-center md:w-[50%] w-full text-center text-black transition-all duration-300"
+          className="bg-[url('../images/main1.png')] rounded-t-[65px] md:rounded-t-[0px] md:rounded-bl-[65px] bg-cover bg-center md:w-[50%] w-full text-center text-black transition-all duration-300 will-change-transform"
           style={{
             transform: `translateY(-${scrollProgress * 30}px)`
           }}
@@ -156,7 +156,7 @@ const ParallaxSection = () => {
 
         </div>
         <div 
-          className="bg-[url('../images/OrnateJewelry.png')] rounded-b-[65px] md:rounded-b-[0px] md:rounded-br-[65px] bg-cover md:w-[50%] w-full text-center text-black transition-all duration-300"
+          className="bg-[url('../images/OrnateJewelry.png')] rounded-b-[65px] md:rounded-b-[0px] md:rounded-br-[65px] bg-cover md:w-[50%] w-full text-center text-black transition-all duration-300 will-change-transform"
           style={{
             transform: `translateY(-${scrollProgress * 30}px)`
           }}
@@ -168,7 +168,7 @@ const ParallaxSection = () => {
       {/* Sección de contenido normal después del efecto */}
       <div 
         ref={targetSectionRef} /*Sección que se monitoreará para el cambio de color*/
-        className={`h-fit md:h-screen flex items-center justify-center py-20 relative z-10 ${getBackgroundColor('target')}`}
+        className={`h-fit md:h-screen flex items-center justify-center py-20 relative z-10 will-change-transform ${getBackgroundColor('target')}`}
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
          
