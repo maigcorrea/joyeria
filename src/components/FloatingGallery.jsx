@@ -101,12 +101,12 @@ function FMImage({ src, y }) {
     // Dentro, el <img> es absolute con inset: 0; width/height: 100%; object-fit: cover;
     // → equivalente a un “fill + cover” en nextjs.
     <motion.div style={{ y }} className={styles.imageContainer}>
-      <img
+      <a href="#"><img
         src={url}
         alt="image"
         className={styles.blurUp} //Empieza con desenfoque y un pelín de escala; al cargar, se quita la clase → transición suave.
         onLoad={(e) => e.currentTarget.classList.remove(styles.blurUp)}
-      />
+      /></a>
     </motion.div>
   );
 }
