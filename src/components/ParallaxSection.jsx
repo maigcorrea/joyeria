@@ -13,6 +13,12 @@ const ParallaxSection = () => {
   const [vissibility, setVissibility] = useState(false);
   const ALTURA_FOOTER = 50;
 
+  const [activeSection, setActiveSection] = useState(null);
+  const targetSectionRef = useRef(null); // Esta es la sección que queremos monitorear
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
+
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -23,9 +29,9 @@ const ParallaxSection = () => {
       setScrollProgress(progress);
       
       // Revelar contenido oculto cuando el scroll supera el 20%
-      if (progress > 0.2 && !isRevealed) {
+      if (progress > 0 && !isRevealed) {
         setIsRevealed(true);
-      } else if (progress <= 0.2 && isRevealed) {
+      } else if (progress <= 0 && isRevealed) {
         setIsRevealed(false);
       }
       
@@ -46,6 +52,86 @@ const ParallaxSection = () => {
     });
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Calculamos si la mitad del contenedor ha llegado al top de la ventana
+          const rect = entry.boundingClientRect;
+          const containerHeight = rect.height;
+          const containerTop = rect.top;
+          
+          // La mitad del contenedor está en el top cuando:
+          // containerTop + (containerHeight / 2) <= 0
+          // Simplificado: containerTop <= -(containerHeight / 2)
+          const halfReachedTop = containerTop <= -(containerHeight / 12);
+          
+          if (entry.target === targetSectionRef.current) {
+            if (halfReachedTop && containerTop > -containerHeight) {
+              // La mitad ha llegado al top y el contenedor aún es visible
+              setActiveSection('target');
+            } else if (activeSection === 'target' && !halfReachedTop) {
+              // Ya no cumple la condición, resetear
+              setActiveSection(null);
+            }
+          }
+        });
+      },
+      {
+        // Observamos intersecciones en múltiples puntos para mayor precisión
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+        // Sin margen para que sea exacto con el top de la ventana
+        rootMargin: '0px'
+      }
+    );
+
+    if (targetSectionRef.current) {
+      observer.observe(targetSectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [activeSection]);
+
+  // Alternativa más precisa usando scroll event (comentada abajo)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!targetSectionRef.current) return;
+      
+      const rect = targetSectionRef.current.getBoundingClientRect();
+      const containerHeight = rect.height;
+      const containerTop = rect.top;
+      
+      // La mitad del contenedor ha llegado al top de la ventana
+      const halfReachedTop = containerTop <= -(containerHeight / 2);
+      // El contenedor aún es visible (no ha salido completamente)
+      const stillVisible = containerTop > -containerHeight;
+      
+      if (halfReachedTop && stillVisible) {
+        setActiveSection('target');
+      } else if (activeSection === 'target') {
+        setActiveSection(null);
+      }
+    };
+
+    // Descomenta estas líneas si prefieres usar scroll event en lugar de Intersection Observer
+    // window.addEventListener('scroll', handleScroll, { passive: true });
+    // return () => window.removeEventListener('scroll', handleScroll);
+  }, [activeSection]);
+
+  const getBackgroundColor = (sectionName) => {
+    if (activeSection === 'target') {
+      // Cuando se activa, todos cambian de color
+      switch (sectionName) {
+        case 'section1': return 'bg-red-500';
+        case 'section2': return 'transition-[background-color] duration-700 bg-black';
+        case 'section3': return 'bg-blue-500';
+        case 'target': return 'transition-[background-color] duration-700 bg-black';
+        default: return 'transition-[background-color] duration-700 bg-white';
+      }
+    }
+    // Colores por defecto
+    return 'transition-[background-color] duration-700 bg-white';
+  };
 
   return (
     <div className="relative">
@@ -81,7 +167,8 @@ const ParallaxSection = () => {
 
       {/* Sección de contenido normal después del efecto */}
       <div 
-        className="h-fit md:h-screen bg-white flex items-center justify-center py-20 relative z-10"
+        ref={targetSectionRef} /*Sección que se monitoreará para el cambio de color*/
+        className={`h-fit md:h-screen flex items-center justify-center py-20 relative z-10 ${getBackgroundColor('target')}`}
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
          
@@ -99,10 +186,11 @@ const ParallaxSection = () => {
 
             {/* Otra sección para más contenido */}
       <div 
-        className="min-h-screen bg-white overflow-x-hidden py-20 relative z-10"
+        ref={section2Ref}
+        className={`min-h-screen overflow-x-hidden py-20 relative z-10 ${getBackgroundColor('section2')}`}
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
-          transition: 'transform 0.3s ease-out'
+          // transition: 'transform 0.3s ease-out'
         }}
       >
         <Index></Index>
