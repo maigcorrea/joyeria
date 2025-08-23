@@ -42,7 +42,7 @@ const MainSection = () => {
           {/* Center Column - Main Typography */}
           <div className="col-span-4 flex justify-center items-center relative z-20">
             <div className="text-center ">
-              <h1 className="text-[90px] leading-19 lg:text-[300px]/60 font-light tracking-wider  text-black drop-shadow-lg">
+              <h1 className="text-[90px] leading-19 lg:text-[300px]/60 font-light tracking-wider text-zinc-800 drop-shadow-lg">
                 <span className="">Élisée Jewerly</span>
               </h1>
             </div>

@@ -60,24 +60,24 @@ const ParallaxFooter = () => {
       {/* Sección superior que se superpone */}
       <div 
         ref={topFooterSectionRef}
-        className="h-[40vh] rounded-b-[65px] bg-white flex items-center relative z-10 transition-transform duration-300 ease-out will-change-transform "
+        className="h-fit rounded-b-[65px] bg-white flex items-center justify-center text-center relative z-10 transition-transform duration-300 ease-out py-6 will-change-transform "
         style={{
           transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`
         }}
       >
         <div 
-          className=" text-gray-400 transition-all duration-300 will-change-transform "
+          className=" text-gray-400 transition-all duration-300 will-change-transform py-20 "
           style={{
-            transform: `translateY(-${scrollProgress * 30}px)`,
-            opacity: 1 - scrollProgress * 0.5
+            // transform: `translateY(-${scrollProgress * 30}px)`,
+            // opacity: 1 - scrollProgress * 0.5
           }}
         >
           <h1 className="text-4xl md:text-6xl font-light tracking-wider mb-4 drop-shadow-lg">
-            Bienvenido
+            ¿Quieres saber más sobre nuestras marcas?
           </h1>
-          <p className="text-lg md:text-xl opacity-90 max-w-2xl px-4">
-            Haz scroll hacia abajo para revelar contenido oculto con un efecto parallax impresionante
-          </p>
+          {/* <button className="text-lg font-semibold text-gray-50 md:text-xl bg-black rounded-full border-none p-4 cursor-pointer">
+            Más info
+          </button> */}
         </div>
       </div>
 
@@ -97,7 +97,7 @@ const ParallaxFooter = () => {
                 <div className="flex items-center justify-start">
                     <input type="text" placeholder="Tu correo" className='absolute w-full lg:w-full md:w-full p-4 rounded-r-4xl bg-white bg-opacity-20 outline-none' />
                     <div className="flex justify-end w-full lg:w-full md:w-full">
-                        <button className="relative inline-block bg-black text-white box-border px-6 py-4 rounded-4xl cursor-pointer transition-all hover:scale-110" onClick={handleClick}>Suscribirse</button>
+                        <button className="relative inline-block bg-black text-white font-semibold box-border px-6 py-4 rounded-4xl cursor-pointer transition-all hover:scale-110" onClick={handleClick}>Suscribirse</button>
                     </div>
                 </div>
             </div>           
