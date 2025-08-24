@@ -2,13 +2,13 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import FloatingNavbar from '../components/navBar'
 import { SpeedInsights } from "@vercel/speed-insights/react"
-import { usePageTracking } from '../hooks/usePageTracking'
+// import { usePageTracking } from '../hooks/usePageTracking'
 
 const GA_ID = import.meta.env.VITE_GA_ID;
 
 const Layout = () => {
   useEffect(() => {
-    usePageTracking(GA_ID);
+    // usePageTracking(GA_ID);
 
     if (!GA_ID) return;
 
