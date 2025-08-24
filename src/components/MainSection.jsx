@@ -58,7 +58,7 @@ const MainSection = () => {
               
               {/* Bottom Image */}
               <motion.div 
-                className="aspect-[4/3] lg:flex-1 rounded-lg relative overflow-hidden"
+                className="aspect-[4/3] lg:flex-1 rounded-lg relative overflow-hidden hidden lg:block"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
