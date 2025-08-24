@@ -8,8 +8,8 @@ const GA_ID = import.meta.env.VITE_GA_ID;
 
 const Layout = () => {
   useEffect(() => {
-    usePageTracking={GA_ID}
-    
+    usePageTracking(GA_ID);
+
     if (!GA_ID) return;
 
     // Inyectar script de Google Analytics
