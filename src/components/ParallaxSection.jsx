@@ -136,13 +136,13 @@ const ParallaxSection = () => {
   return (
     <div className="relative">
       {/* Container con altura fija para mantener el espacio durante el scroll */}
-      <div className="relative h-screen bg-white ">
+      <div className="relative h-[100dvh] bg-white ">
 
 
       {/* Sección superior que se superpone */}
       <div 
         ref={topSectionRef}
-        className="h-screen bg-white flex flex-wrap relative z-12 transition-transform duration-100 ease-out will-change-transform"
+        className="h-[100dvh] bg-white flex flex-wrap relative z-12 transition-transform duration-100 ease-out will-change-transform"
         style={{
           transform: `translateY(${scrollProgress * -ALTURA_FOOTER}vh)`,
         }}
