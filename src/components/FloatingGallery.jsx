@@ -3,7 +3,7 @@ import styles from "./floatingGallery.module.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 // Si usas Vite/CRA y tienes las imágenes en /public, referencia con string:
-const images = ["/images/GoldenTouchSerenity.png", "/images/main2.png", "/images/main2.png", "/images/ElegantHand.png", "/images/ElegantHand.png","/images/ElegantGemstoneEarrings.png", "/images/ringsCloseUp.png"];
+const images = ["/images/GoldenTouchSerenity.png", "/images/main2.png", "/images/ElegantHands.png", "/images/BlueNecklace.png", "/images/HandWater.png","/images/ElegantGemstoneEarrings.png", "/images/ringsCloseUp.png"];
 
 const word = "Encuentra algo único";
 

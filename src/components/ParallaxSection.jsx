@@ -148,7 +148,7 @@ const ParallaxSection = () => {
         }}
       >
         <div 
-          className="bg-[url('../images/main1.png')] rounded-t-[65px] md:rounded-t-[0px] md:rounded-bl-[65px] bg-cover bg-center md:w-[50%] w-full text-center text-black transition-all duration-300 will-change-transform"
+          className="bg-[url('../images/ElegantBeach.png')] rounded-t-[65px] md:rounded-t-[0px] md:rounded-bl-[65px] bg-cover bg-top md:w-[50%] w-full text-center text-black transition-all duration-300 will-change-transform"
           style={{
             transform: `translateY(-${scrollProgress * 30}px)`
           }}

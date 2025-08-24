@@ -20,9 +20,9 @@ const MainSection = () => {
             
             {/* Bottom Image */}
             <motion.div 
-              className="flex-1 relative bg-[url('../images/ElegantPortrait.png')] bg-cover bg-center rounded-lg overflow-hidden"
+              className="flex-1 relative bg-[url('../images/MonochromePearl.png')] bg-cover bg-center rounded-lg overflow-hidden "
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 0.9, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div> */}
@@ -42,7 +42,7 @@ const MainSection = () => {
           {/* Center Column - Main Typography */}
           <div className="col-span-4 flex justify-center items-center relative z-20">
             <div className="text-center ">
-              <h1 className="text-[90px] leading-19 lg:text-[300px]/60 font-light tracking-wider text-zinc-800 drop-shadow-lg">
+              <h1 className="text-[90px] leading-19 lg:text-[310px]/60 font-light tracking-wider text-zinc-800 drop-shadow-lg">
                 <span className="">Élisée Jewerly</span>
               </h1>
             </div>
@@ -52,9 +52,9 @@ const MainSection = () => {
           <div className="col-span-4 flex flex-col gap-6">
             {/* Top Right Image */}
             <motion.div 
-              className="flex-1 w-[50%] bg-[url('../images/ElegantGold1.png')] bg-cover rounded-lg relative overflow-hidden"
+              className="flex-1 w-[50%] bg-[url('../images/main1.png')] bg-cover bg-center scale-105 rounded-lg relative overflow-hidden"
               initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 0.85, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               {/* Artistic representation of crouching figure */}
