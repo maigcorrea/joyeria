@@ -20,7 +20,7 @@ const MainSection = () => {
             
             {/* Bottom Image */}
             <motion.div 
-              className="aspect-[5/5] md:aspect-[3/4] lg:flex-1 relative bg-[url('../images/MonochromePearl.png')] bg-cover bg-center rounded-lg overflow-hidden "
+              className="aspect-[4/5] md:aspect-[3/4] lg:flex-1 relative bg-[url('../images/MonochromePearl.png')] bg-cover bg-center rounded-lg overflow-hidden "
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 0.9, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -41,7 +41,7 @@ const MainSection = () => {
           <div className="lg:col-span-4 flex flex-col gap-4 md:gap-6 order-3 lg:order-3">
             {/* Top Right Image */}
             <motion.div 
-              className="aspect-[5/3] md:aspect-[3/2] lg:flex-1 w-full lg:w-[50%] bg-[url('../images/main1.png')] bg-cover bg-center scale-105 rounded-lg relative overflow-hidden"
+              className="aspect-[4/3] md:aspect-[3/2] lg:flex-1 w-full lg:w-[50%] bg-[url('../images/main1.png')] bg-cover bg-center scale-105 rounded-lg relative overflow-hidden"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 0.85, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
