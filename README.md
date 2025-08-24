@@ -1,6 +1,6 @@
 # Resumen del proyecto - Èlisèe Jewerly
 
-Proyecto desarrollado con tecnologías modernas para crear una experiencia premium en joyería digital. Combina diseño elegante, animaciones sofisticadas y rendimiento optimizado.
+Proyecto desarrollado con tecnologías modernas para crear una experiencia premium en joyería digital. Combina diseño elegante, animaciones sofisticadas y rendimiento optimizado. (El vídeo con una sección de la demo está cargando, tarda un poco, aparecerá debajo)
 
 ![video](./mp4/demoGaleria.gif)
 ---
