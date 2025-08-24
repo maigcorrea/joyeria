@@ -49,7 +49,7 @@ const MainSection = () => {
             </motion.div>
             
             {/* Bottom Right Section */}
-            <div className="flex-1 flex flex-col min-h-[300px] lg:min-h-0 ">
+            <div className="flex-1 flex-col min-h-[300px] lg:min-h-0 hidden lg:block">
               {/* Brands Count */}
               <div className="text-center mb-4 md:mb-6 hidden lg:block">
                 <div className="text-4xl md:text-6xl font-light text-gray-400">+32</div>
