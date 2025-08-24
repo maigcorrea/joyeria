@@ -5,14 +5,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const Layout = () => {
   return (
     <>
-    <SpeedInsights >
+    <SpeedInsights />
         <header>
             <FloatingNavbar />
         </header>
         <main>
             <Outlet></Outlet>
         </main>
-        </SpeedInsights>
     </>
   )
 }
