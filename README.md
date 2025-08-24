@@ -2,6 +2,7 @@
 
 Proyecto desarrollado con tecnologías modernas para crear una experiencia premium en joyería digital. Combina diseño elegante, animaciones sofisticadas y rendimiento optimizado.
 
+![video](./mp4/demoGaleria.gif)
 ---
 
 ## 📋 Información General
@@ -29,7 +30,7 @@ Proyecto desarrollado con tecnologías modernas para crear una experiencia premi
 ### Estilos
 
 - Tailwind CSS - Framework utility-first con clases personalizadas
-- CSS Modules - Estilos encapsulados (floatingGallery.module.css)
+- CSS Modules - Estilos encapsulados
 - CSS Personalizado - Efectos blur, transiciones
 
 ### Animaciones
@@ -57,7 +58,6 @@ Proyecto desarrollado con tecnologías modernas para crear una experiencia premi
 ### Colores de Acento
 
 - Transparencias: Uso extensivo de opacidades (0.6, 0.85, 0.9)
-- Gradientes Dinámicos: Animación de gradiente de opacidad en 4 direcciones
 - Efectos Blur: filter: blur(5px) para profundidad visual
 
 ### Tipografía
@@ -76,53 +76,13 @@ Proyecto desarrollado con tecnologías modernas para crear una experiencia premi
 - Efectos Parallax: Múltiples capas de movimiento para profundidad
 - Blur-up Loading: Transiciones suaves de carga de imágenes
 
-### Componentes Principales
-
-#### Navegación
-
-- Navbar flotante con bordes redondeados
-- Menú móvil fullscreen con animaciones suaves
-- Transiciones fluidas con delays escalonados
-
-#### MainSection
-
-- Grid responsivo de 12 columnas
-- Tipografía masiva (90px-310px) para impacto visual
-- Imágenes de fondo con overlay sutil
-- Animaciones de entrada escalonadas
-
-#### ParallaxSection
-
-#### FloatingGallery
-
-- 7 imágenes flotantes con posicionamiento absoluto
-- Parallax multinivel: 3 velocidades diferentes (sm, md, lg)
-- Texto animado: Cada letra con movimiento independiente
-- Efectos de profundidad: Z-index y blur para capas
-
-#### ParallaxFooter
-
-- Sección revelable activada por scroll
-- Newsletter integrada con formulario estilizado
-- Footer informativo con múltiples secciones
-- Scroll indicator animado con bounce
-
 ---
-
-## 👩‍💻 Funcionalidades Avanzadas
-
-- Intersection Observer para detección de secciones
-- Scroll Progress Tracking para animaciones precisas
-- Mobile Menu con bloqueo de scroll del body
-- Responsive Breakpoints: Mobile, tablet y desktop
-- Performance Optimized: will-change para GPU acceleration
 
 ## 📱 Responsive Design
 
 - Mobile First
 - Navegación adaptativa: Hamburger menu en móvil, navbar horizontal en desktop
-- Tipografía fluida: text-[20vw] escalable por viewport
-- Grid responsivo: 12 columnas que se adaptan por dispositivo
+- Tipografía fluida: escalable por viewport
 - Imágenes optimizadas: object-fit: cover para mantener proporciones
 
 ---
@@ -134,26 +94,7 @@ Proyecto desarrollado con tecnologías modernas para crear una experiencia premi
 - will-change: transform para aceleration GPU
 - Framer Motion con useTransform optimizado
 - Lazy loading con blur-up effect en imágenes
-- Intersection Observer para detección eficiente de scroll
 
----
-
-## 🖌️ Efectos Visuales Destacados
-
-### Animaciones
-
-- Gradiente animado: Keyframes con background-position shifting
-- Parallax multicapa: 3 velocidades diferentes (0-100px, 0-450px, 0-650px)
-- Letter animation: Cada letra con offset aleatorio y movimiento independiente
-- Blur effects: Transición suave de blur(20px) a nítido
-- Scale transitions: Hover effects con transform scale
-
-### Transiciones
-
-- Duration: 300ms, 600ms, 700ms para diferentes elementos
-- Easing: ease, ease-out, cubic-bezier personalizado
-- Transform: translateY, scale, opacity combinados
-- Stagger: Delays escalonados (0.2s, 0.4s, 0.6s)
 
 ---
 
