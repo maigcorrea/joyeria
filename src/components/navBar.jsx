@@ -27,7 +27,7 @@ const FloatingNavbar = () => {
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
         <div className="bg-white rounded-full shadow-lg px-6 py-3 flex items-center space-x-8">
           {/* Logo */}
-          <div className="font-bold text-xl text-gray-800">
+          <div className="font-bold gap-2 text-xl text-gray-800">
             Élisée
           </div>
           
