@@ -66,7 +66,7 @@ const ParallaxFooter = () => {
         }}
       >
         <div 
-          className=" text-gray-400 transition-all duration-300 will-change-transform py-20 "
+          className=" text-gray-400 transition-all duration-300 will-change-transform md:py-20 "
           style={{
             // transform: `translateY(-${scrollProgress * 30}px)`,
             // opacity: 1 - scrollProgress * 0.5

@@ -102,7 +102,9 @@
 
 
 @media(max-width: 768px){
-    
+    .container{
+        min-height: 75vh;
+    }
     .blurUp{
         filter: none;
     }
