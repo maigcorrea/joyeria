@@ -187,7 +187,7 @@ const ParallaxSection = () => {
             {/* Otra sección para más contenido */}
       <div 
         ref={section2Ref}
-        className={`min-h-[100dvh] md:min-h-screen overflow-x-hidden py-20 relative z-10 ${getBackgroundColor('section2')}`}
+        className={`h-fit md:min-h-screen overflow-x-hidden py-20 relative z-10 ${getBackgroundColor('section2')}`}
         style={{
           transform: `translateY(-${scrollProgress * ALTURA_FOOTER}vh)`,
           // transition: 'transform 0.3s ease-out'
