@@ -40,7 +40,7 @@ Proyecto desarrollado con tecnologías modernas para crear una experiencia premi
 
 ## 🎨 Paleta de Colores y tipografía
 
-###Colores Principales
+### Colores Principales
 
 - Blanco Principal: bg-white - Base limpia y elegante
 - Gris Claro: bg-gray-50 - Fondo neutro y suave
