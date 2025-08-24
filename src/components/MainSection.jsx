@@ -6,7 +6,7 @@ const MainSection = () => {
     <div className="min-h-[100dvh] relative bg-gray-50 p-8 z-10">
       <div className="mx-auto">
         {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-4rem)] pt-[120px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-4rem)] pt-[120px] lg:pt-[0px]">
           
           {/* Left Column - Text and Image */}
           <div className="lg:col-span-4 flex flex-col order-2 lg:order-1">
@@ -49,16 +49,16 @@ const MainSection = () => {
             </motion.div>
             
             {/* Bottom Right Section */}
-            <div className="flex-1 flex flex-col min-h-[300px] lg:min-h-0">
+            <div className="flex-1 flex flex-col min-h-[300px] lg:min-h-0 ">
               {/* Brands Count */}
-              <div className="text-center mb-4 md:mb-6">
+              <div className="text-center mb-4 md:mb-6 hidden lg:block">
                 <div className="text-4xl md:text-6xl font-light text-gray-400">+32</div>
                 <div className="text-xs md:text-sm tracking-widest text-gray-600 uppercase">MARCAS</div>
               </div>
               
               {/* Bottom Image */}
               <motion.div 
-                className="aspect-[4/3] lg:flex-1 rounded-lg relative overflow-hidden hidden lg:block"
+                className="aspect-[4/3] lg:flex-1 rounded-lg relative overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
