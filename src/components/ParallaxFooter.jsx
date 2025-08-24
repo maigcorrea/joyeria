@@ -84,7 +84,7 @@ const ParallaxFooter = () => {
       {/* Sección oculta que se revela */}
       <div 
         ref={hiddenSectionRef}
-        className="hiddenParallaxSection h-[60vh] pb-25 pt-55 fixed bottom-0 left-0 w-full z-0 flex flex-col items-start justify-center bg-gray-200 px-6">
+        className="hiddenParallaxSection h-[60dvh] pb-25 pt-55 fixed bottom-0 left-0 w-full z-0 flex flex-col items-start justify-center bg-gray-200 px-6">
         {/* <div className="flex flex-wrap justify-between md:w-full"> */}
             <div 
             className={`text-black transition-all duration-600 ease-out ml-6 ${
