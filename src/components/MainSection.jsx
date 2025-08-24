@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 
 const MainSection = () => {
   return (
-    <div className="min-h-[100dvh] relative bg-gray-50 p-8 z-10">
+    <div className="min-h-screen relative bg-gray-50 p-8 z-10">
       <div className="mx-auto">
         {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 min-h-[calc(100dvh-2rem)] md:min-h-[calc(100dvh-4rem)] pt-[120px] lg:pt-[0px]">
+        <div className="grid grid-cols-12 gap-6 h-screen">
           
           {/* Left Column - Text and Image */}
-          <div className="lg:col-span-4 flex flex-col order-2 lg:order-1">
+          <div className="col-span-4 flex flex-col">
             {/* Top Text Block */}
-            <div className="mb-6 md:mb-8 md:pr-8">
+            <div className="mb-8 pr-8">
               <p className="text-sm text-gray-700 leading-relaxed font-light">
                Más allá del tiempo,<br />
                más allá del lujo.
@@ -20,51 +20,73 @@ const MainSection = () => {
             
             {/* Bottom Image */}
             <motion.div 
-              className="aspect-[4/5] md:aspect-[3/4] lg:flex-1 relative bg-[url('../images/MonochromePearl.png')] bg-cover bg-center rounded-lg overflow-hidden "
+              className="flex-1 relative bg-[url('../images/MonochromePearl.png')] bg-cover bg-center rounded-lg overflow-hidden "
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 0.9, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div> */}
+              {/* Model with bag - artistic representation */}
+              {/* <div className="absolute bottom-8 left-8 right-8">
+                <div className="w-32 h-32 bg-gradient-to-br from-red-800 to-red-900 rounded-full mb-4 shadow-2xl transform rotate-12"></div>
+                <div className="w-full h-32 bg-gradient-to-r from-black to-gray-800 rounded-lg shadow-xl transform -skew-x-3"></div>
+              </div> */}
+              {/* Artistic representation of reclining figure */}
+              {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className="w-24 h-24 bg-gradient-to-br from-amber-200 to-amber-400 rounded-full"></div>
+                <div className="w-48 h-16 bg-gradient-to-r from-black to-gray-700 rounded-full mt-4 transform -rotate-12"></div>
+              </div> */}
             </motion.div>
           </div>
           
           {/* Center Column - Main Typography */}
-          <div className="lg:col-span-4 flex justify-center items-center relative z-20 order-1 lg:order-2">
-            <div className="text-center">
-              <h1 className="text-[60px] leading-[0.8] sm:text-[90px] lg:text-[120px] font-light tracking-wider text-zinc-800 drop-shadow-lg">
+          <div className="col-span-4 flex justify-center items-center relative z-20">
+            <div className="text-center ">
+              <h1 className="text-[90px] leading-19 lg:text-[310px]/60 font-light tracking-wider text-zinc-800 drop-shadow-lg">
                 <span className="">Élisée Jewerly</span>
               </h1>
             </div>
           </div>
           
           {/* Right Column - Images */}
-          <div className="lg:col-span-4 flex flex-col gap-4 md:gap-6 order-3 lg:order-3">
+          <div className="col-span-4 flex flex-col gap-6">
             {/* Top Right Image */}
             <motion.div 
-              className="aspect-[4/3] md:aspect-[3/2] lg:flex-1 w-full lg:w-[50%] bg-[url('../images/main1.png')] bg-cover bg-center scale-105 rounded-lg relative overflow-hidden"
+              className="flex-1 w-[50%] bg-[url('../images/main1.png')] bg-cover bg-center scale-105 rounded-lg relative overflow-hidden"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 0.85, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
+              {/* Artistic representation of crouching figure */}
+              {/* <div className="absolute bottom-8 right-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-300 to-amber-500 rounded-full mb-2"></div>
+                <div className="w-32 h-48 bg-gradient-to-b from-red-700 to-red-900 rounded-lg shadow-xl"></div>
+                <div className="w-24 h-12 bg-black rounded-lg mt-2 shadow-lg"></div>
+              </div> */}
             </motion.div>
             
             {/* Bottom Right Section */}
-            <div className="flex-1 flex-col min-h-[300px] lg:min-h-0 hidden lg:block">
+            <div className="flex-1 flex flex-col">
               {/* Brands Count */}
-              <div className="text-center mb-4 md:mb-6 hidden lg:block">
-                <div className="text-4xl md:text-6xl font-light text-gray-400">+32</div>
-                <div className="text-xs md:text-sm tracking-widest text-gray-600 uppercase">MARCAS</div>
+              <div className="text-center mb-6">
+                <div className="text-6xl font-light text-gray-400">+32</div>
+                <div className="text-sm tracking-widest text-gray-600 uppercase">MARCAS</div>
               </div>
               
               {/* Bottom Image */}
               <motion.div 
-                className="aspect-[4/3] lg:flex-1 rounded-lg relative overflow-hidden"
+                className="flex-1 rounded-lg relative overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {/* Artistic representation of close-up portrait */}
                 <div className="absolute inset-0 bg-[url('../images/ElegantHand.png')] bg-cover bg-center"></div>
+                {/* <div className="absolute bg-[url('../images/ElegantGemstoneEarrings.png')] top-1/3 left-1/2 transform -translate-x-1/2"> */}
+                  {/* <div className="w-24 h-32 bg-gradient-to-b from-amber-300 to-amber-500 rounded-full"></div>
+                  <div className="w-32 h-6 bg-black rounded-lg mt-4 mx-auto"></div>
+                  <div className="w-20 h-4 bg-red-600 rounded-sm mt-2 mx-auto"></div> */}
+                {/* </div> */}
               </motion.div>
             </div>
           </div>
@@ -73,8 +95,8 @@ const MainSection = () => {
         {/* Decorative Elements */}
         
         
-        {/* Subtle grid overlay - Hidden on mobile */}
-        <div className="absolute inset-0 opacity-13 pointer-events-none z-[-2] hidden lg:block">
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 opacity-13 pointer-events-none z-[-2]">
           <div className="grid grid-cols-12 gap-6 h-full">
             {Array.from({length: 12}).map((_, i) => (
               <div key={i} className="border-r border-gray-700"></div>
