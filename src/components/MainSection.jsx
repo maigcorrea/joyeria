@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 
 const MainSection = () => {
   return (
-    <div className="min-h-screen relative bg-gray-50 p-8 z-10">
+    <div className="min-h-[100svh] sm:min-h-screen relative bg-gray-50 p-8 z-10">
       <div className="mx-auto">
         {/* Main Grid Layout */}
-        <div className="grid grid-cols-12 gap-6 h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-screen">
           
           {/* Left Column - Text and Image */}
-          <div className="col-span-4 flex flex-col">
+          <div className="md:col-span-4 flex md:flex-col order-2 ">
             {/* Top Text Block */}
-            <div className="mb-8 pr-8">
+            <div className="mb-4 sm:mb-8 md:pr-8">
               <p className="text-sm text-gray-700 leading-relaxed font-light">
                Más allá del tiempo,<br />
                más allá del lujo.
@@ -20,7 +20,7 @@ const MainSection = () => {
             
             {/* Bottom Image */}
             <motion.div 
-              className="flex-1 relative bg-[url('../images/MonochromePearl.png')] bg-cover bg-center rounded-lg overflow-hidden "
+              className="relative bg-[url('../images/MonochromePearl.png')] bg-cover bg-center bg-no-repeat rounded-lg overflow-hidden aspect-[6/4] sm:aspect-[3/4] md:flex-1"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 0.9, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -40,7 +40,7 @@ const MainSection = () => {
           </div>
           
           {/* Center Column - Main Typography */}
-          <div className="col-span-4 flex justify-center items-center relative z-20">
+          <div className="md:col-span-4 flex justify-center items-center relative z-20 order-1">
             <div className="text-center ">
               <h1 className="text-[90px] leading-19 lg:text-[310px]/60 font-light tracking-wider text-zinc-800 drop-shadow-lg">
                 <span className="">Élisée Jewerly</span>
@@ -49,10 +49,10 @@ const MainSection = () => {
           </div>
           
           {/* Right Column - Images */}
-          <div className="col-span-4 flex flex-col gap-6">
+          <div className="md:col-span-4 flex md:flex-col gap-6 order-3">
             {/* Top Right Image */}
             <motion.div 
-              className="flex-1 w-[50%] bg-[url('../images/main1.png')] bg-cover bg-center scale-105 rounded-lg relative overflow-hidden"
+              className="w-full md:w-[50%] bg-[url('../images/main1.png')] bg-no-repeat bg-cover bg-center md:scale-105 rounded-lg relative overflow-hidden aspect-video sm:aspect-[4/3] md:aspect-auto md:flex-1"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 0.85, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -66,16 +66,16 @@ const MainSection = () => {
             </motion.div>
             
             {/* Bottom Right Section */}
-            <div className="flex-1 flex flex-col">
+            <div className="md:flex-1 flex flex-col">
               {/* Brands Count */}
-              <div className="text-center mb-6">
-                <div className="text-6xl font-light text-gray-400">+32</div>
-                <div className="text-sm tracking-widest text-gray-600 uppercase">MARCAS</div>
+              <div className="text-center mb-4 sm:mb-6">
+                <div className="text-4xl sm:text-6xl font-light text-gray-400">+32</div>
+                <div className="text-xs sm:text-sm tracking-widest text-gray-600 uppercase">MARCAS</div>
               </div>
               
               {/* Bottom Image */}
               <motion.div 
-                className="flex-1 rounded-lg relative overflow-hidden"
+                className="aspect-[4/3] sm:aspect-[3/2] md:aspect-auto md:flex-1 rounded-lg relative overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
