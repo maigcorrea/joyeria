@@ -9,7 +9,7 @@ const MainSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-screen">
           
           {/* Left Column - Text and Image */}
-          <div className="md:col-span-4 flex md:flex-col order-2 ">
+          <div className="md:col-span-4 flex md:flex-col order-2 md:order-none ">
             {/* Top Text Block */}
             <div className="mb-4 sm:mb-8 md:pr-8">
               <p className="text-sm text-gray-700 leading-relaxed font-light">
@@ -40,7 +40,7 @@ const MainSection = () => {
           </div>
           
           {/* Center Column - Main Typography */}
-          <div className="md:col-span-4 flex justify-center items-center relative z-20 order-1">
+          <div className="md:col-span-4 flex justify-center items-center relative z-20 order-1 md:order-none">
             <div className="text-center ">
               <h1 className="text-[90px] leading-19 lg:text-[310px]/60 font-light tracking-wider text-zinc-800 drop-shadow-lg">
                 <span className="">Élisée Jewerly</span>
@@ -49,7 +49,7 @@ const MainSection = () => {
           </div>
           
           {/* Right Column - Images */}
-          <div className="md:col-span-4 flex md:flex-col gap-6 order-3">
+          <div className="md:col-span-4 flex md:flex-col gap-6 order-3 md:order-none">
             {/* Top Right Image */}
             <motion.div 
               className="w-full md:w-[50%] bg-[url('../images/main1.png')] bg-no-repeat bg-cover bg-center md:scale-105 rounded-lg relative overflow-hidden aspect-video sm:aspect-[4/3] md:aspect-auto md:flex-1"
