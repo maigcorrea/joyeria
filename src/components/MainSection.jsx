@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const MainSection = () => {
   return (
-    <div className="min-h-[100svh] sm:min-h-screen relative bg-gray-50 p-8 z-10">
+    <div className="min-h-[100svh] sm:min-h-screen relative bg-white sm:bg-gray-50 p-8 z-10">
       <div className="mx-auto">
         {/* Main Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-screen">
