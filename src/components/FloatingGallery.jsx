@@ -14,7 +14,7 @@ function Letter({ char, progress }) {
   // En CSS, el span es position: relative para que top surta efecto.
   const offsetRef = useRef(Math.floor(Math.random() * -75) - 25);
   const y = useTransform(progress, [0, 1], [0, offsetRef.current]);
-  return <motion.span style={{ top: y }}>{char}</motion.span>;
+  return <motion.span className="text-[4vw] sm:text-[2vw]" style={{ top: y }}>{char}</motion.span>;
 }
 
 function FMImage({ src, y, enlace }) {
@@ -93,7 +93,7 @@ export default function Index() {
     <div ref={container} className={styles.container}>
       <div className={styles.body}>
         <motion.h1 className="font-extralight tracking-wider text-gray-400 text-[20vw] leading-[18vw] md:text-[10vw] md:leading-[5vw]" style={{ y: lg }}>Explora</motion.h1> {/*Se mueve poco → sensación de que está “más lejos”.*/}
-        <h1 className="font-extralight tracking-wider text-gray-400 text-[5vw]">nuestras categorías</h1>
+        <h1 className="font-extralight tracking-wider text-gray-400 text-[7vw] md:text-[5vw]">nuestras categorías</h1>
         <div className={styles.word}>
           <p>
             {word.split("").map((ch, i) => (
